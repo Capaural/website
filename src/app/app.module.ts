@@ -42,7 +42,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     AuthService,
-    AuthGuardService
+    AuthGuardService,
+    NgbModule
   ],
   bootstrap: [AppComponent]
 })
