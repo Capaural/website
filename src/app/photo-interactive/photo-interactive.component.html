@@ -4,8 +4,6 @@
 </div>
 
 
-
-
 <div class="picture" id="picture">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 612 585">
       <g>
@@ -28,23 +26,22 @@
 
 
 
-<h1>Angular 8 Bootstrap Modal Popup Example</h1>
 
 <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button>
 
-<ng-template #mymodal let-modal>
+<ng-template #mymodal let-modal id='test'>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+    <h4 class="modal-title" id="modal-basic-title">Informations</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">×</span>
+      <span aria-hidden="true">x</span>
     </button>
   </div>
 
   <div class="modal-body">
-    This is example from ItSolutionStuff.com
-  </div>
-
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+    <img src="../../assets/default.jpeg" alt="photoDeProfile">
+    <p>Nom et Prenom</p>
+    <p>Pseudo</p>
+    <p>Poste</p>
+    <p>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. In expedita veniam voluptas voluptates quam eum eius iusto unde earum voluptatibus similique nisi, provident asperiores dolores necessitatibus placeat? Molestiae, officia rerum!</p>
   </div>
 </ng-template>
