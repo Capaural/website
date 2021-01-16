@@ -25,15 +25,7 @@
 </div>
 
 
-<<<<<<< HEAD
-
-
-<button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button>
-
-<ng-template #mymodal let-modal id='test'>
-=======
 <ng-template #presentationModal let-modal>
->>>>>>> 89fa3805bed95aed58177b71fb493994fc484503
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Informations</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
@@ -42,18 +34,10 @@
   </div>
 
   <div class="modal-body">
-<<<<<<< HEAD
-    <img src="../../assets/default.jpeg" alt="photoDeProfile">
-    <p>Nom et Prenom</p>
-    <p>Pseudo</p>
-    <p>Poste</p>
-    <p>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. In expedita veniam voluptas voluptates quam eum eius iusto unde earum voluptatibus similique nisi, provident asperiores dolores necessitatibus placeat? Molestiae, officia rerum!</p>
-=======
     {{ nom }}
   </div>
 
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
->>>>>>> 89fa3805bed95aed58177b71fb493994fc484503
   </div>
 </ng-template>
