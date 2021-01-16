@@ -31,7 +31,7 @@
                     <p class="text-success" *ngIf="fileUploaded">Fichier chargé !</p>
                 </div>
 
-                <button class="btn btn-success" [disabled]="memberForm.invalid || fileIsUploading"
+                <button class="btn btn-success" [disabled]="memberForm.invalid || !fileUploaded"
                         type="submit">Enregistrer</button>
             </form>
         </div>

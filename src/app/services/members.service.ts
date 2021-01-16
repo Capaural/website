@@ -32,47 +32,8 @@ export class MembersService {
     })
   }
 
-  getSingleGame(id: number) {
-    return new Promise(
-      (resolve, reject) => {
-        firebase.database().ref('/members/' + id).once('value').then(
-          (data) => {
-            resolve(data.val());
-          }, (error) => {
-            reject(error);
-          }
-        );
-      }
-    );
-  }
-
   createNewMember(newMember: Member) {
     this.members.unshift(newMember);
-    this.saveMembers();
-    this.emitMembers();
-  }
-
-  removeMember(game: Member) {
-    if (game.photo) {
-      const storageRef = firebase.storage().refFromURL(game.photo);
-      storageRef.delete().then(
-        () => {
-          console.log("Photo supprimée !");
-        }
-      ).catch(
-        (error) => {
-          console.log("Fichier non trouvé : " + error);
-        }
-      );
-    }
-    const gameIndexToRemove = this.members.findIndex(
-      (gameEl) => {
-        if (gameEl === game) {
-          return true;
-        }
-      }
-    );
-    this.members.splice(gameIndexToRemove, 1);
     this.saveMembers();
     this.emitMembers();
   }
@@ -85,9 +46,7 @@ export class MembersService {
                         .child('images/' + uniqueFileName + file.name)
                         .put(file);
         upload.on(firebase.storage.TaskEvent.STATE_CHANGED,
-          () => {
-            console.log('Chargement...');
-          },
+          () => {},
           (error) => {
             console.log('Erreur de chargement...');
             reject();

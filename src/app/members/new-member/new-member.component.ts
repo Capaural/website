@@ -54,7 +54,6 @@ export class NewMemberComponent implements OnInit {
     this.fileIsUploading = true;
     this.gameService.uploadFile(file).then(
       (url: string) => {
-        console.log("url :" + url);
         this.fileUrl = url;
         this.fileIsUploading = false;
         this.fileUploaded = true;
