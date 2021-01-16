@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-photo-interactive',
@@ -7,32 +8,19 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./photo-interactive.component.scss']
 })
 export class PhotoInteractiveComponent implements OnInit {
+  @ViewChild('presentationModal')
+  private presModal: TemplateRef<any>;
 
-  closeResult: string;
-
+  nom: string;
+  
   constructor(private modalService: NgbModal) {}
-
+  
   ngOnInit(): void {}
-
+  
   showInfos(event) {
     var target = event.target || event.srcElement || event.currentTarget;
     var idAttr = target.attributes.title.value; 
-    alert(idAttr);
-  }
-
-
-  open(content) {
-    console.log(content);
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result;
-  }
-
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return `with: ${reason}`;
-    }
+    this.nom = idAttr;
+    this.modalService.open(this.presModal, {ariaLabelledBy: 'modal-basic-title'});
   }
 }
