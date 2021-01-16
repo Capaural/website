@@ -1,6 +1,8 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { Subscription } from 'rxjs';
+import { Member } from '../models/Member.model';
+import { MembersService } from '../services/members.service';
 
 @Component({
   selector: 'app-photo-interactive',
@@ -11,16 +13,36 @@ export class PhotoInteractiveComponent implements OnInit {
   @ViewChild('presentationModal')
   private presModal: TemplateRef<any>;
 
-  nom: string;
+  presentedMember: Member;
+  name: string;
+  lastName: string;
+  role: string;
+  description: string;
+  alias: string;
+  members: Member[];
+  memberSubscription: Subscription;
   
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal,
+              private membersService: MembersService) {}
   
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.members = null;
+    this.memberSubscription = this.membersService.membersSubject.subscribe(
+      (members: Member[]) => {
+        this.members = members;
+      }
+    );
+  }
   
   showInfos(event) {
     var target = event.target || event.srcElement || event.currentTarget;
-    var idAttr = target.attributes.title.value; 
-    this.nom = idAttr;
+    var idAttr = target.attributes.title.value;
+
+    if (!this.members || idAttr > this.members.length) {return;}
+
+    idAttr = 1;
+    this.presentedMember = this.members[idAttr];
+    
     this.modalService.open(this.presModal, {ariaLabelledBy: 'modal-basic-title'});
   }
 }

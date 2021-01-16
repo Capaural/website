@@ -27,17 +27,19 @@
 
 <ng-template #presentationModal let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Informations</h4>
+    <h4 class="modal-title" id="modal-basic-title">{{ presentedMember.name }} {{ presentedMember.lastName }} <span style="font-style: italic; font-size: smaller;"> {{ presentedMember.alias }}</span></h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">x</span>
     </button>
   </div>
 
   <div class="modal-body">
-    {{ nom }}
+    <p>Mon role est: {{ presentedMember.role }}</p>
+    <h5>Ma description</h5>
+    <p>{{ presentedMember.description }}</p>
   </div>
 
-  <div class="modal-footer">
+  <!-- <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
-  </div>
+  </div> -->
 </ng-template>
