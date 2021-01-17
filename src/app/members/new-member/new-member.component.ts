@@ -28,6 +28,9 @@ export class NewMemberComponent implements OnInit {
     this.memberForm = this.formBuilder.group({
       name: ['', Validators.required],
       lastname: ['', Validators.required],
+      alias: ['', Validators.required],
+      role: ['', Validators.required],
+      description: ['', Validators.required],
     });
   }
 
@@ -35,8 +38,11 @@ export class NewMemberComponent implements OnInit {
     //Form informations
     const name = this.memberForm.get('name').value;
     const lastname = this.memberForm.get('lastname').value;
+    const alias = this.memberForm.get('alias').value;
+    const role = this.memberForm.get('role').value;
+    const description = this.memberForm.get('description').value;
 
-    const newMember = new Member(name, lastname);
+    const newMember = new Member(name, lastname, alias, role, description);
     if (this.fileUrl && this.fileUrl !== '') {
       newMember.photo = this.fileUrl;
     }
@@ -48,7 +54,6 @@ export class NewMemberComponent implements OnInit {
     this.fileIsUploading = true;
     this.gameService.uploadFile(file).then(
       (url: string) => {
-        console.log("url :" + url);
         this.fileUrl = url;
         this.fileIsUploading = false;
         this.fileUploaded = true;
