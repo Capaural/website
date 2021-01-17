@@ -14,6 +14,7 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewMemberComponent } from './members/new-member/new-member.component';
+import { WeekPlanningComponent } from './week-planning/week-planning.component';
 
 const appRoutes: Routes = [
   { path: 'auth/signin', component: SigninComponent},
@@ -32,13 +33,16 @@ const appRoutes: Routes = [
     SigninComponent,
     HomePageComponent,
     FooterComponent,
-    NewMemberComponent
+    NewMemberComponent,
+    WeekPlanningComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {
+      anchorScrolling: 'enabled'
+    })
   ],
   providers: [
     AuthService,
