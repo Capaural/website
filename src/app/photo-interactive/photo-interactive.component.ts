@@ -1,4 +1,5 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { Member } from '../models/Member.model';
 import { MembersService } from '../services/members.service';
@@ -21,7 +22,8 @@ export class PhotoInteractiveComponent implements OnInit {
   members: Member[];
   memberSubscription: Subscription;
   
-  constructor(private membersService: MembersService) {}
+  constructor(private modalService: NgbModal,
+              private membersService: MembersService) {}
   
   ngOnInit(): void {
     this.members = null;
@@ -42,6 +44,6 @@ export class PhotoInteractiveComponent implements OnInit {
     idAttr = 1;
     this.presentedMember = this.members[idAttr];
     
-    //this.modalService.open(this.presModal, {ariaLabelledBy: 'modal-basic-title'});
+    this.modalService.open(this.presModal, {ariaLabelledBy: 'modal-basic-title'});
   }
 }
