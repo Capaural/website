@@ -1,0 +1,33 @@
+$base-color: #a4ced2;
+$hovered-color: #3538d2;
+
+.picture {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.picture path {
+    fill: $base-color;
+
+    stroke: white;
+    stroke-width: 1px;
+
+    transition: fill 0.3s;
+}
+
+.picture path:hover {
+    fill: $hovered-color;
+
+    stroke: white;
+    stroke-width: 1px;
+
+    transition: fill 0.3s;
+}
+
+.presentation {
+    text-decoration: underline;
+}
+
+#presentationPicture {
+    width: 100%;
+}
