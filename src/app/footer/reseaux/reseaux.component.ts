@@ -11,5 +11,4 @@ export class ReseauxComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
