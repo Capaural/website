@@ -17,7 +17,6 @@ import { PhotoInteractiveComponent } from './photo-interactive/photo-interactive
 import { WeekPlanningComponent } from './week-planning/week-planning.component';
 import { ReseauxComponent } from './footer/reseaux/reseaux.component';
 import { PartenairesComponent } from './footer/partenaires/partenaires.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 const appRoutes: Routes = [
@@ -49,8 +48,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes, {
       anchorScrolling: 'enabled'
-    }),
-    FontAwesomeModule
+    })
   ],
   providers: [
     AuthService,
