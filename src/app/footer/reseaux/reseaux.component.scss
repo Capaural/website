@@ -23,7 +23,9 @@
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 .social-btns .btn.instagram .fab {
-    color: red;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 
 .social-btns .btn.discord:before {
@@ -45,10 +47,18 @@
   top: -10%;
   left: -10%;
 }
+
 .social-btns .btn:focus .fab,
 .social-btns .btn:hover .fab {
   color: #fff;
   transform: scale(1);
+}
+
+.social-btns .btn.instagram:focus .fab,
+.social-btns .btn.instagram:hover .fab {
+  background: #fff;
+  -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 
 .social-btns .btn.tiktok:focus .fab,

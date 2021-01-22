@@ -2,9 +2,8 @@
 *              Variables
 * ----------------------------------------*/
 
-// $footer-main-color: #74AA50;
-// $footer-second-color: #719949;
 $footer-main-color:white;
+$footer-second-color: #f5f5f5;
 
 $separator-color: #9CAF88;
 $separator-margin-side: 25px;
@@ -16,9 +15,9 @@ footer {
     background-color: $footer-main-color;
 }
 
-// .footer-part {
-//     background-color: $footer-second-color;
-// }
+.footer-part {
+    background-color: $footer-second-color;
+}
 
 .footer-title {
     text-transform: uppercase;
