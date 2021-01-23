@@ -2,8 +2,8 @@
 *              Variables
 * ----------------------------------------*/
 
-$footer-main-color: #74AA50;
-$footer-second-color: #719949;
+$footer-main-color:white;
+$footer-second-color: #f5f5f5;
 
 $separator-color: #9CAF88;
 $separator-margin-side: 25px;
@@ -22,12 +22,6 @@ footer {
 .footer-title {
     text-transform: uppercase;
     text-decoration: underline;
-}
-
-.list-group {
-    margin-top: 10px;
-    width: 50%;
-    margin: 0 auto;
 }
 
 /* ----------------------------------------

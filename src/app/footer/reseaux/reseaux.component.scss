@@ -1,0 +1,119 @@
+@import '//codepen.io/chrisdothtml/pen/ojLzJK.css';
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fab {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-btns .btn .fab {
+  transform: scale(0.8);
+}
+.social-btns .btn.facebook:before {
+  background-color: #3b5998;
+}
+.social-btns .btn.facebook .fab {
+  color: #3b5998;
+}
+
+.social-btns .btn.instagram:before {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.social-btns .btn.instagram .fab {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.social-btns .btn.discord:before {
+    background: #7289DA;
+}
+.social-btns .btn.discord .fab {
+    color: #7289DA;
+}
+
+.social-btns .btn.tiktok:before {
+    background: black;
+}
+.social-btns .btn.tiktok .fab {
+    color:black;
+}
+
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+
+.social-btns .btn:focus .fab,
+.social-btns .btn:hover .fab {
+  color: #fff;
+  transform: scale(1);
+}
+
+.social-btns .btn.instagram:focus .fab,
+.social-btns .btn.instagram:hover .fab {
+  background: #fff;
+  -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.social-btns .btn.tiktok:focus .fab,
+.social-btns .btn.tiktok:hover .fab {
+    filter: drop-shadow(-2px -2px 0 #24f6f0) drop-shadow(3px 0px 0 #fe2d52);//brightness(110%);
+}
+
+.social-btns .btn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+   margin-top: 45px;
+   margin-bottom:45px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  opacity: 0.99;
+  padding:0;
+  padding-top:3px;
+  box-shadow:  13px 13px 26px #d9d9d9,
+             -13px -13px 26px #ffffff;
+}
+
+
+.social-btns .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.social-btns .btn .fab {
+  font-size: 25px;
+}
+
+.social-btns .btn.instagram .fab {
+  font-size: 30px;
+}
+
+.site {
+   display:inline-block;
+   margin: 0 auto;
+    width: 22%;
+}
+
+@media (min-width:1000px) {
+    .site {
+        width: 15%;
+    }
+}
+
+.social-btns {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}

@@ -15,6 +15,8 @@ import { HeroComponent } from './hero/hero.component';
 import { NewMemberComponent } from './members/new-member/new-member.component';
 import { PhotoInteractiveComponent } from './photo-interactive/photo-interactive.component';
 import { WeekPlanningComponent } from './week-planning/week-planning.component';
+import { ReseauxComponent } from './footer/reseaux/reseaux.component';
+import { PartenairesComponent } from './footer/partenaires/partenaires.component';
 
 
 const appRoutes: Routes = [
@@ -36,7 +38,9 @@ const appRoutes: Routes = [
     HeroComponent,
     NewMemberComponent,
     PhotoInteractiveComponent,
-    WeekPlanningComponent
+    WeekPlanningComponent,
+    ReseauxComponent,
+    PartenairesComponent,
   ],
   imports: [
     BrowserModule,
