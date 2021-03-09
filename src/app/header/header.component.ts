@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  scrollToElement(elementId: string): void {    
-    document.getElementById(elementId).scrollIntoView({behavior: "smooth"});
+  scrollToElement(element: string): void {
+    var elementPart = document.getElementById(element);
+    if (!elementPart) {
+      if (element == "game") {
+        this.router.navigate(["game"]);
+      } else {
+        this.router.navigate(["home"], { queryParams: { part: element } });
+      }
+    } else {
+      elementPart.scrollIntoView({ behavior: "smooth" });
+    }
   }
-
 }

@@ -21,10 +21,10 @@ export class PhotoInteractiveComponent implements OnInit {
   alias: string;
   members: Member[];
   memberSubscription: Subscription;
-  
+
   constructor(private modalService: NgbModal,
-              private membersService: MembersService) {}
-  
+    private membersService: MembersService) { }
+
   ngOnInit(): void {
     this.members = null;
     this.memberSubscription = this.membersService.membersSubject.subscribe(
@@ -32,18 +32,19 @@ export class PhotoInteractiveComponent implements OnInit {
         this.members = members;
       }
     );
+    if (!this.members) this.membersService.emitMembers();
   }
-  
+
   showInfos(event) {
     var target = event.target || event.srcElement || event.currentTarget;
     var idAttr = target.attributes.title.value;
 
-    if (!this.members || idAttr > this.members.length) {return;}
-
+    if (!this.members || this.members.length == 0 || idAttr > this.members.length) { return; }
+    
     // Il va juste falloir changer le titre de chaque ligne du svg pour ouvrir la bonne personne
     idAttr = 2;
     this.presentedMember = this.members[idAttr];
-    
-    this.modalService.open(this.presModal, {ariaLabelledBy: 'modal-basic-title'});
+
+    this.modalService.open(this.presModal, { ariaLabelledBy: 'modal-basic-title' });
   }
 }
