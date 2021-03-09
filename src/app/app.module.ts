@@ -18,6 +18,7 @@ import { WeekPlanningComponent } from './week-planning/week-planning.component';
 import { ReseauxComponent } from './footer/reseaux/reseaux.component';
 import { PartenairesComponent } from './footer/partenaires/partenaires.component';
 import { GameComponent } from './game/game.component';
+import { HeroSonarComponent } from './hero-sonar/hero-sonar.component';
 
 
 const appRoutes: Routes = [
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
     ReseauxComponent,
     PartenairesComponent,
     GameComponent,
+    HeroSonarComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,188 @@
+$mainBackgroundColor: black;
+
+$sonarBackgroundColor: #222222;
+$sonarOutsideLine: #8ba892;
+$sonarLineColor: rgba(139, 168, 146, 0.15);
+$sonarSpreadLineColor: rgba(139, 168, 146, 0.5);
+
+$sonarObjectsColor: #8ba892;
+$sonarObjectsMiddleColor: #c5d4c9;
+
+
+@function get-vw($target) { 
+  $vw-context: (1000*.01) * 1px;
+  $res: ($target/$vw-context) * 1vw;
+
+  @return $res;
+}
+
+
+$spreadTime: 2.5s;
+
+$sonarSize: 35vw;
+
+
+#sonarPart {
+    width: 100%;
+    height: 80vh;
+    background-color: $mainBackgroundColor;
+}
+
+
+#sonar {
+    position: relative;
+    top : 125px;
+    bottom : 0;
+    left : 0;
+    right : 0;
+    width: $sonarSize;
+    height: $sonarSize;
+    margin: auto;
+    background: $sonarBackgroundColor;
+    overflow: hidden;
+    border: 2px solid $sonarOutsideLine;
+    -webkit-border-radius: $sonarSize;
+    border-radius: $sonarSize;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+  #sonar:before,
+  #sonar:after {
+    content: '';
+    background: $sonarLineColor;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+  #sonar:before {
+    width: 1px;
+  }
+  #sonar:after {
+    height: 1px;
+  }
+  #sonar i {
+    display: block;
+    margin: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid $sonarLineColor;
+    -webkit-border-radius: $sonarSize;
+    border-radius: $sonarSize;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+  #sonar > i:before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-color: #8ba892 transparent;
+    border-width: 0 5px 15px;
+  }
+  #sonar.animated .dot {
+    background: $sonarObjectsMiddleColor;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    margin-top: -2px;
+    margin-left: -2px;
+    opacity: 0.3;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 0 3px 4px $sonarObjectsColor;
+    box-shadow: 0 0 3px 4px $sonarObjectsColor;
+    -webkit-animation: dot_pulse linear $spreadTime infinite;
+    animation: dot_pulse linear $spreadTime infinite;
+  }
+  #sonar.animated .line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999;
+    width: 6px;
+    height: 6px;
+    -webkit-border-radius: $sonarSize;
+    border-radius: $sonarSize;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-animation: sonar $spreadTime infinite linear;
+    animation: sonar $spreadTime infinite linear;
+    -webkit-box-shadow: inset 0 0 25px 5px $sonarSpreadLineColor;
+    box-shadow: inset 0 0 25px 5px $sonarSpreadLineColor;
+  }
+  #guides {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+  @keyframes sonar {
+    from {
+      width: 5px;
+      height: 5px;
+    }
+    to {
+      width: $sonarSize;
+      height: $sonarSize;
+    }
+  }
+  @-moz-keyframes sonar {
+    from {
+      width: 5px;
+      height: 5px;
+    }
+    to {
+      width: $sonarSize;
+      height: $sonarSize;
+    }
+  }
+  @-webkit-keyframes sonar {
+    from {
+      width: 5px;
+      height: 5px;
+    }
+    to {
+      width: $sonarSize;
+      height: $sonarSize;
+    }
+  }
+  @-moz-keyframes dot_pulse {
+    0% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
+  @-webkit-keyframes dot_pulse {
+    0% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
