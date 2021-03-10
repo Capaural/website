@@ -12,7 +12,7 @@ export class HeroSonarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    var peopleCount = 2;
+    var peopleCount = 3;
     this.peoples = [];
 
     for (let i = 0; i < peopleCount; i++) {
@@ -27,7 +27,7 @@ export class HeroSonarComponent implements OnInit {
 
   radar() {
 
-    var radius = 250;
+    var radius = 100;
     for (let i = 0; i < this.peoples.length; i++) {
       var disX = (90 < this.peoples[i].angle + 90) || (this.peoples[i].angle + 90 < 270) ? radius - this.peoples[i].distance : radius,
         disY = (180 < this.peoples[i].angle + 90) || (this.peoples[i].angle + 90 < 360) ? radius - this.peoples[i].distance : radius,
