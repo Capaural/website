@@ -1,0 +1,12 @@
+<div id="sonarPart">
+    <div id="sonar" class="animated">
+        <i>
+            <i></i>
+        </i>
+        <div id="guides">
+            <div class="line"></div>
+            <span *ngFor="let people of peoples" class="dot"
+                [ngStyle]="{'top.px': people.top,'left.px': people.left, 'animation-delay': people.delay + 's','-webkit-animation-delay': people.delay + 's' }"></span>
+        </div>
+    </div>
+</div>

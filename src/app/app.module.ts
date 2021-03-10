@@ -17,12 +17,15 @@ import { PhotoInteractiveComponent } from './photo-interactive/photo-interactive
 import { WeekPlanningComponent } from './week-planning/week-planning.component';
 import { ReseauxComponent } from './footer/reseaux/reseaux.component';
 import { PartenairesComponent } from './footer/partenaires/partenaires.component';
+import { GameComponent } from './game/game.component';
+import { HeroSonarComponent } from './hero-sonar/hero-sonar.component';
 
 
 const appRoutes: Routes = [
   { path: 'auth/signin', component: SigninComponent},
   { path: 'members/new',canActivate: [AuthGuardService] ,component: NewMemberComponent},
   { path: 'home', component: HomePageComponent},
+  { path: 'game', component: GameComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', redirectTo: 'home'}
 ]
@@ -41,6 +44,8 @@ const appRoutes: Routes = [
     WeekPlanningComponent,
     ReseauxComponent,
     PartenairesComponent,
+    GameComponent,
+    HeroSonarComponent,
   ],
   imports: [
     BrowserModule,
