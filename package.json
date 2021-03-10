@@ -21,6 +21,7 @@
     "@angular/router": "~11.0.9",
     "@ng-bootstrap/ng-bootstrap": "^9.0.0",
     "bootstrap": "^4.5.3",
+    "bulma-timeline": "^3.0.4",
     "firebase": "^8.2.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
