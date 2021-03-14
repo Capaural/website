@@ -27,7 +27,7 @@ export class HeroSonarComponent implements OnInit {
 
   radar() {
 
-    var radius = 100;
+    var radius = 80;
     for (let i = 0; i < this.peoples.length; i++) {
       var disX = (90 < this.peoples[i].angle + 90) || (this.peoples[i].angle + 90 < 270) ? radius - this.peoples[i].distance : radius,
         disY = (180 < this.peoples[i].angle + 90) || (this.peoples[i].angle + 90 < 360) ? radius - this.peoples[i].distance : radius,

@@ -20,6 +20,7 @@ import { PartenairesComponent } from './footer/partenaires/partenaires.component
 import { GameComponent } from './game/game.component';
 import { HeroSonarComponent } from './hero-sonar/hero-sonar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { VideoYoutubeComponent } from './video-youtube/video-youtube.component';
 
 
 const appRoutes: Routes = [
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
     PartenairesComponent,
     GameComponent,
     HeroSonarComponent,
+    VideoYoutubeComponent,
   ],
   imports: [
     BrowserModule,
