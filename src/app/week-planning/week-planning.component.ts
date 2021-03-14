@@ -13,7 +13,18 @@ export class WeekPlanningComponent implements OnInit {
   planning: Activity[][];
   planningSubscription: Subscription;
 
+  days = [
+    "Lundi 12 Avril",
+    "Mardi 13 Avril",
+    "Mercredi 14 Avril",
+    "Jeudi 15 Avril",
+    "Vendredi 16 Avril",
+    "Samedi 17 Avril",
+  ];
+
+
   wantedDay: Activity[];
+  wantedDayIndex: number = 0;
 
   constructor(private planningService: PlanningService) { }
 
@@ -30,11 +41,16 @@ export class WeekPlanningComponent implements OnInit {
   }
   
   getWantedDay() {
-    this.wantedDay = this.planning[0];
+    this.wantedDay = this.planning[this.wantedDayIndex];
+  }
+
+  getNextDay() {
+    this.wantedDayIndex++;
+    this.getWantedDay();
   }
 
   createActivity() {
-    const newActivity = new Activity("is-info", "is-warning", null, "13h00", "Maurice", "Jouer avec Maurice");
+    const newActivity = new Activity("is-info", "is-warning", null, "15h15", "Activité", "Description de l'activité");
     this.planningService.createNewActivity(0, newActivity);
   }
 }
