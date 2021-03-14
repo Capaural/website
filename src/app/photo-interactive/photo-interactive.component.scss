@@ -31,3 +31,31 @@ $hovered-color: #3538d2;
 #presentationPicture {
     width: 100%;
 }
+
+.modal-header {
+    background-color: #3d462d;
+}
+.modal-body {
+    background-color: #596643;
+}
+
+.modal-body p {
+    color: black;
+    margin: 0;
+}
+
+.modal-body p:first-child {
+    margin-top: 20px;
+}
+
+.modal-body p:last-child {
+    margin-bottom: 15px;
+}
+
+span {
+    color: whitesmoke;
+}
+
+img {
+    width: min-content;
+}
