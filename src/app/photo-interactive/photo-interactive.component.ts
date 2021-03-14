@@ -14,11 +14,6 @@ export class PhotoInteractiveComponent implements OnInit {
   private presModal: TemplateRef<any>;
 
   presentedMember: Member;
-  name: string;
-  lastName: string;
-  role: string;
-  description: string;
-  alias: string;
   members: Member[];
   memberSubscription: Subscription;
 
@@ -42,7 +37,7 @@ export class PhotoInteractiveComponent implements OnInit {
     if (!this.members || this.members.length == 0 || idAttr > this.members.length) { return; }
 
     // Il va juste falloir changer le titre de chaque ligne du svg pour ouvrir la bonne personne
-    idAttr = 2;
+    idAttr = 3;
     this.presentedMember = this.members[idAttr];
 
     this.modalService.open(this.presModal, { ariaLabelledBy: 'modal-basic-title' });

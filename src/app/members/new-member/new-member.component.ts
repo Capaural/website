@@ -29,7 +29,8 @@ export class NewMemberComponent implements OnInit {
       name: ['', Validators.required],
       lastname: ['', Validators.required],
       alias: ['', Validators.required],
-      role: ['', Validators.required],
+      pole: ['', Validators.required],
+      grade: ['', Validators.required],
       description: ['', Validators.required],
     });
   }
@@ -39,10 +40,11 @@ export class NewMemberComponent implements OnInit {
     const name = this.memberForm.get('name').value;
     const lastname = this.memberForm.get('lastname').value;
     const alias = this.memberForm.get('alias').value;
-    const role = this.memberForm.get('role').value;
+    const pole = this.memberForm.get('pole').value;
+    const grade = this.memberForm.get('grade').value;
     const description = this.memberForm.get('description').value;
 
-    const newMember = new Member(name, lastname, alias, role, description);
+    const newMember = new Member(name, lastname, alias, grade, pole, description);
     if (this.fileUrl && this.fileUrl !== '') {
       newMember.photo = this.fileUrl;
     }
