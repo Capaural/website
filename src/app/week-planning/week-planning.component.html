@@ -4,19 +4,13 @@
 
   <div class="timeline is-centered">
     <header class="timeline-header">
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          {{ days[wantedDayIndex] }}
-        </button>
-        <button class="btn  btn-secondary" (click)="getNextDay()">Next Day</button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{ days[wantedDayIndex] }}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem *ngFor="let day of days; let index = index;" (click)="getWantedDay(index)" [ngClass]="{'font-weight-bold': index === wantedDayIndex}"> {{ day }}</button>
         </div>
       </div>
-
     </header>
 
     <div class="timeline-item" *ngFor="let activity of wantedDay;" [ngClass]="activity.lineColor">
@@ -33,6 +27,4 @@
       <span class="tag is-medium is-primary">A demain</span>
     </header>
   </div>
-  <button class="btn btn-secondary" (click)="createActivity()"></button>
-
 </div>

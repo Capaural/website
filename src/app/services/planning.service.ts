@@ -33,7 +33,6 @@ export class PlanningService {
   }
 
   sortPlanning() {
-
     for (let d = 0; d < this.planning.length; d++) {
       let n = this.planning[d].length;
       for (let i = 0; i < n; i++) {
@@ -44,7 +43,6 @@ export class PlanningService {
         }
       }
     }
-
   }
 
   getPlanning() {
