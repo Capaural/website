@@ -15,36 +15,23 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </div>
+
     </header>
-    <div class="timeline-item is-info">
-      <div class="timeline-marker is-danger"></div>
-      <div class="timeline-content">
-        <p class="heading">8H00</p>
-        <p>Début d'une activité</p>
-      </div>
-    </div>
-    <div class="timeline-item is-primary">
-      <div class="timeline-marker is-warning"></div>
-      <div class="timeline-content">
-        <p class="heading">10H15</p>
-        <p>On fait quoi ici?</p>
-      </div>
-    </div>
-    <header class="timeline-header">
-      <span class="tag is-primary">Midi</span>
-    </header>
-    <div class="timeline-item is-danger">
-      <div class="timeline-marker is-danger is-icon">
-        <i class="fa fa-flag"></i>
+
+    <div class="timeline-item" *ngFor="let activity of wantedDay;" [ngClass]="activity.lineColor">
+      <div class="timeline-marker" [ngClass]="activity.dotColor">
+        <i [ngClass]="activity.icon"></i>
       </div>
       <div class="timeline-content">
-        <p class="heading">14H30</p>
-        <p>Un autre truc</p>
+        <p class="heading">{{ activity.hour }}</p>
+        <p class="font-weight-bold">{{ activity.title }}</p>
+        <p>{{ activity.description }}</p>
       </div>
     </div>
     <header class="timeline-header">
       <span class="tag is-medium is-primary">A demain</span>
     </header>
   </div>
+  <button class="btn btn-secondary" (click)="createActivity()"></button>
 
 </div>
