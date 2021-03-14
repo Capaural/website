@@ -1,28 +1,30 @@
-<div class="container" id="weekPlanning">
+<div class="container mb-5" id="weekPlanning">
   <br>
   <h3>Programme de la semaine!</h3>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat modi adipisci incidunt itaque praesentium eos quae voluptas animi natus ullam ut facilis, est eligendi vitae dolorum repellendus quia debitis iure?</p>
+
+  <div class="timeline is-centered">
+    <header class="timeline-header">
+
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{ days[wantedDayIndex] }}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem *ngFor="let day of days; let index = index;" (click)="getWantedDay(index)" [ngClass]="{'font-weight-bold': index === wantedDayIndex}"> {{ day }}</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="timeline-item" *ngFor="let activity of wantedDay;" [ngClass]="activity.lineColor">
+      <div class="timeline-marker" [ngClass]="activity.dotColor">
+        <i [ngClass]="activity.icon"></i>
+      </div>
+      <div class="timeline-content">
+        <p class="heading">{{ activity.hour }}</p>
+        <p class="font-weight-bold">{{ activity.title }}</p>
+        <p>{{ activity.description }}</p>
+      </div>
+    </div>
+    <header class="timeline-header">
+      <span class="tag is-medium is-primary">A demain</span>
+    </header>
+  </div>
 </div>

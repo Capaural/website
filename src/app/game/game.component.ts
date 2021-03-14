@@ -14,18 +14,6 @@ export class GameComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const loader = (window as any).UnityLoader;
-
-    this.gameInstance = loader.instantiate(
-    'gameContainer', 
-    '/assets/build/Build/WebGL_build.loader.js', {
-    onProgress: (gameInstance: any, progress: number) => {
-        this.progress = progress;
-        if (progress === 1) {
-          this.isReady = true;
-        }
-      }
-    });
   }
 
 }

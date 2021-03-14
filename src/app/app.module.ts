@@ -19,6 +19,7 @@ import { ReseauxComponent } from './footer/reseaux/reseaux.component';
 import { PartenairesComponent } from './footer/partenaires/partenaires.component';
 import { GameComponent } from './game/game.component';
 import { HeroSonarComponent } from './hero-sonar/hero-sonar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 const appRoutes: Routes = [
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes, {
       anchorScrolling: 'enabled'
-    })
+    }),
+    NgbModule
   ],
   providers: [
     AuthService,

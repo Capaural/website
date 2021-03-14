@@ -40,7 +40,7 @@ export class PhotoInteractiveComponent implements OnInit {
     var idAttr = target.attributes.title.value;
 
     if (!this.members || this.members.length == 0 || idAttr > this.members.length) { return; }
-    
+
     // Il va juste falloir changer le titre de chaque ligne du svg pour ouvrir la bonne personne
     idAttr = 2;
     this.presentedMember = this.members[idAttr];
