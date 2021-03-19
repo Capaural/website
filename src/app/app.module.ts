@@ -21,6 +21,7 @@ import { GameComponent } from './game/game.component';
 import { HeroSonarComponent } from './hero-sonar/hero-sonar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VideoYoutubeComponent } from './video-youtube/video-youtube.component';
+import { DefiListComponent } from './defi-list/defi-list.component';
 
 
 const appRoutes: Routes = [
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
   { path: 'members/new',canActivate: [AuthGuardService] ,component: NewMemberComponent},
   { path: 'home', component: HomePageComponent},
   { path: 'game', component: GameComponent},
+  { path: 'defis', component: DefiListComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', redirectTo: 'home'}
 ]
@@ -49,6 +51,7 @@ const appRoutes: Routes = [
     GameComponent,
     HeroSonarComponent,
     VideoYoutubeComponent,
+    DefiListComponent,
   ],
   imports: [
     BrowserModule,
