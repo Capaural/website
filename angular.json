@@ -55,6 +55,7 @@
               "src/styles.scss"
             ],
             "scripts": [
+              "src/assets/game/Build/WebGL build.loader.js"
             ]
           },
           "configurations": {

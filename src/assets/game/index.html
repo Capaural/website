@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8">
+    <title>Unity WebGL Player | Capaural</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 432px; height: 768px; background: #231F20"></canvas>
+    <script src="Build/WebGL build.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/WebGL build.data.unityweb",
+        frameworkUrl: "Build/WebGL build.framework.js.unityweb",
+        codeUrl: "Build/WebGL build.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "ExoCarrot",
+        productName: "Capaural",
+        productVersion: "0.1",
+      });
+    </script>
+  </body>
+</html>
