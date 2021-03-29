@@ -54,9 +54,7 @@
               "node_modules/bulma-timeline/dist/css/bulma-timeline.min.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "src/assets/game/Build/WebGL build.loader.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
