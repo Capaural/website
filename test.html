@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+</body>
+
+</html>
+
+<script>
+    const url = "http://localhost:3000"; // Serveur de test
+    // const url = "https://capaural-backend.herokuapp.com";
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState > 3) {
+            document.querySelector('#result').innerHTML = xhr.responseText;
+        }
+    };
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    const data = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29yZSI6IjUwMDAwIiwibmFtZSI6IlZpY3RvciIsImlhdCI6MTUxNjIzOTAyMn0.jFFS3ZwDc8I-fbTWB0afO6K6luA1ALScvSi6Yzx37-s";
+    xhr.send(JSON.stringify({"data":data}));
+</script>

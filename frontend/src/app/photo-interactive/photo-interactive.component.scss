@@ -1,0 +1,105 @@
+$base-color: #a4ced2;
+$hovered-color: #3538d2;
+$hovered-color2: #596643;
+$stroke-width: 0px;
+$stroke-width-hover: 6px;
+
+.picture {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.picture path {
+    fill: $base-color;
+
+    stroke: white;
+    stroke-width: 1px;
+
+    transition: fill 0.3s;
+}
+
+.picture path:hover {
+    fill: $hovered-color;
+
+    stroke: white;
+    stroke-width: 1px;
+
+    transition: fill 0.3s;
+}
+
+.presentation {
+    text-decoration: underline;
+}
+
+#presentationPicture {
+    width: 100%;
+}
+
+.modal-header {
+    background-color: #3d462d;
+}
+.modal-body {
+    background-color: #596643;
+}
+
+.modal-body p {
+    color: black;
+    margin: 0;
+}
+
+.modal-body p:first-child {
+    margin-top: 20px;
+}
+
+.modal-body p:last-child {
+    margin-bottom: 15px;
+}
+
+span {
+    color: whitesmoke;
+}
+
+img {
+    width: min-content;
+}
+
+
+
+////////////////////
+
+
+.picture2 path {
+    fill: transparent;
+
+    stroke: white;
+    stroke-width: $stroke-width;
+
+    transition: fill 0.3s;
+}
+
+.picture2 path:hover {
+    fill: rgba($color: $hovered-color2, $alpha: 0.6);
+
+    stroke: white;
+    stroke-width: $stroke-width-hover;
+
+    transition: fill 0.3s;
+}
+
+
+.img-overlay-wrap {
+    position: relative;
+    display: inline-block; /* <= shrinks container to image size */
+}
+  
+.img-overlay-wrap img { /* <= optional, for responsiveness */
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+  
+.img-overlay-wrap svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

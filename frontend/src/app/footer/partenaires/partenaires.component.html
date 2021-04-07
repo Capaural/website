@@ -1,0 +1,10 @@
+<h3>Nos sponsors</h3>
+
+<ngb-carousel *ngIf="sponsors" [showNavigationArrows]="showNavigationArrows"
+	[showNavigationIndicators]="showNavigationIndicators">
+	<ng-template ngbSlide *ngFor="let sponsor of sponsors">
+		<div class="picsum-img-wrapper">
+			<img [src]="sponsor.src" [alt]="sponsor.alt">
+		</div>
+	</ng-template>
+</ngb-carousel>
