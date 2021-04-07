@@ -16,3 +16,10 @@ body {
 }
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: 'army-buster';
+    src: url('./assets/fonts/Army\ Buster.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

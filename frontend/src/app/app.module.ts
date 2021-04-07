@@ -22,6 +22,7 @@ import { HeroSonarComponent } from './hero-sonar/hero-sonar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VideoYoutubeComponent } from './video-youtube/video-youtube.component';
 import { DefiListComponent } from './defi-list/defi-list.component';
+import { ScoreboardComponent } from './game/scoreboard/scoreboard.component';
 
 
 const appRoutes: Routes = [
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
     HeroSonarComponent,
     VideoYoutubeComponent,
     DefiListComponent,
+    ScoreboardComponent,
   ],
   imports: [
     BrowserModule,

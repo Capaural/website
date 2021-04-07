@@ -1,0 +1,30 @@
+<div class="container">
+  <br>
+  <h3 id="classement">Classement du jeu</h3>
+  <p class="font-weight-light">
+    Essayez de mettre un nom pour qu'on soit en mesure de vous contacter afin de vous remettre votre prix!
+  </p><br>
+
+  <div class="loader mt-5" *ngIf="ranks.length == 0">
+    <div class="text-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <p>Chargement du classement...</p>
+    </div>
+  </div>
+
+  <ul class="list-group">
+    <li class="list-group-item text-center" *ngFor="let defi of ranks; let i = index">
+      <span class="font-weight-bold">{{ i+1 }} - </span>
+      <span class="font-weight-bold">{{ defi.name }} </span>
+      <span class="font-italic">{{ defi.score}} </span>
+    </li>
+  </ul>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
