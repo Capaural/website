@@ -1,41 +1,10 @@
 <h3>Nos sponsors</h3>
 
-<div class="slider">
-	<div class="slide-track">
-
-		<div class="slide" *ngFor="let sponsor of sponsors">
-			<img [src]="sponsor.src" [height]="sponsor.height" [width]="sponsor.width" [alt]="sponsor.alt" />
+<ngb-carousel *ngIf="sponsors" [showNavigationArrows]="showNavigationArrows"
+	[showNavigationIndicators]="showNavigationIndicators">
+	<ng-template ngbSlide *ngFor="let sponsor of sponsors">
+		<div class="picsum-img-wrapper">
+			<img [src]="sponsor.src" [alt]="sponsor.alt">
 		</div>
-		<div class="slide" *ngFor="let sponsor of sponsors">
-			<img [src]="sponsor.src" [height]="sponsor.height" [width]="sponsor.width" [alt]="sponsor.alt" />
-		</div>
-
-		<!-- <div class="slide">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-		</div>
-		<div class="slide">
-			<img src="../../../assets/Next-Logo.png" height="100" width="100" alt="" />
-		</div>
-		<div class="slide socgen">
-			<img src="../../../assets/societe-generale-logo.png" height="200" width="250" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-		</div>
-		<div class="slide">
-			<img src="../../../assets/Next-Logo.png" height="100" width="100" alt="" />
-		</div>
-		<div class="slide socgen">
-			<img src="../../../assets/societe-generale-logo.png" height="100" width="250" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-		</div>
-		<div class="slide">
-			<img src="../../../assets/Next-Logo.png" height="100" width="100" alt="" />
-		</div>
-		<div class="slide socgen">
-			<img src="../../../assets/societe-generale-logo.png" height="100" width="250" alt="" />
-		</div> -->
-	</div>
-</div>
+	</ng-template>
+</ngb-carousel>

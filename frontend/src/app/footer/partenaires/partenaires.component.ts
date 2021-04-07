@@ -1,47 +1,49 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-partenaires',
   templateUrl: './partenaires.component.html',
   styleUrls: ['./partenaires.component.scss']
 })
-export class PartenairesComponent implements OnInit {
+export class PartenairesComponent {
 
-  sponsors: any[] = [
+  showNavigationArrows = false;
+  showNavigationIndicators = false;
+  // images = [1,2,3,4].map((n) => `../../../assets/sponsors/${n}.png`);
+  sponsors = [
     {
-      src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
-      height: 200,
-      width: 250,
-      alt: "Logo de base a changer"
+      src: "../../../assets/sponsors/1.png",
+      alt: "Logo Société Générale"
     },
     {
-      src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
-      height: 200,
-      width: 250,
-      alt: "Logo de base a changer"
+      src: "../../../assets/sponsors/2.png",
+      alt: "Logo Pumpkin"
     },
     {
-      src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
-      height: 200,
-      width: 250,
-      alt: "Logo de base a changer"
+      src: "../../../assets/sponsors/3.png",
+      alt: "Logo Next"
     },
     {
-      src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
-      height: 200,
-      width: 250,
-      alt: "Logo de base a changer"
+      src: "../../../assets/sponsors/4.png",
+      alt: "Logo Axel Design"
     },
     {
-      src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
-      height: 200,
-      width: 250,
-      alt: "Logo de base a changer"
-    }];
+      src: "../../../assets/sponsors/5.png",
+      alt: "Logo Laludikavern"
+    },
+    {
+      src: "../../../assets/sponsors/6.png",
+      alt: "Logo Le Bureau Des Goodies"
+    },
+  ];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(config: NgbCarouselConfig) {
+    // customize default values of carousels used by this component tree
+    config.showNavigationArrows = true;
+    config.showNavigationIndicators = true;
+    config.interval = 3000;
+    config.pauseOnHover = false;
+    config.pauseOnFocus = false;
   }
-
 }
