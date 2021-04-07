@@ -1,26 +1,10 @@
 <div class="container">
   <br>
-  <h3 id="defis">Liste des défis</h3><br>
+  <h3 id="defis">Liste des défis</h3>
 
   <p class="font-weight-light">
-    Voici une liste de défis, que vous pouvez realiser... <br>
-    Pour que vos points soient comptabilisés, envoyé nous une vidéo de vous en train de faire le défis de votre choix <span class="text-danger">par contre je sais pas ou</span>
-  </p>
-  <div class="loader mt-5" *ngIf="defis.length == 0">
-    <div class="text-center">
-      <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
-      <p>Chargement des défis...</p>
-    </div>
-  </div>
-
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let defi of defis"
-      [ngClass]="{'list-group-item-success': defi.winner.length !== 0 }">
-      <span class="font-weight-bold">{{ defi.name }} </span>
-      <span class="font-italic">{{ defi.winner}} </span>
-      <span class="badge badge-primary badge-pill">{{ defi.value }}</span>
-    </li>
-  </ul>
+    Vous pouvez nous proposer des défis ici:<br>
+    <span class="text-danger">Attention, vous ne pouvez soumettre qu'un seul défi!</span>
+  </p><br>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeg6iqXRzG2PvVMgJKpW6g__Ke6PAQ-luvGo6KuTXXNC-8SSw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
 </div>

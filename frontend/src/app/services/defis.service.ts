@@ -19,21 +19,11 @@ export class DefisService {
     this.defisSubject.next(this.defis);
   }
 
-  saveDefis() {
-    firebase.database().ref('/defis').set(this.defis);
-  }
-
   getDefis() {
     firebase.database().ref('/defis')
       .on('value', (data) => {
         this.defis = data.val() ? data.val() : [];
         this.emitDefis();
       })
-  }
-
-  createNewDefis(newDefi: Defi) {
-    this.defis.unshift(newDefi);
-    this.saveDefis();
-    this.emitDefis();
   }
 }
