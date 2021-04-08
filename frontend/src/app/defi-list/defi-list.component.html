@@ -1,10 +1,33 @@
 <div class="container">
   <br>
-  <h3 id="defis">Liste des défis</h3>
+  <h3 id="defis">Proposer un défi</h3>
 
   <p class="font-weight-light">
     Vous pouvez nous proposer des défis ici:<br>
     <span class="text-danger">Attention, vous ne pouvez soumettre qu'un seul défi!</span>
   </p><br>
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeg6iqXRzG2PvVMgJKpW6g__Ke6PAQ-luvGo6KuTXXNC-8SSw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+
+  <br>
+  <h3 id="defis">Liste des défis</h3>
+
+  <p class="font-weight-light">
+    Voici une liste des défis que vous nous avez proposé
+  </p>
+  <br>
+  <div class="loader mt-5" *ngIf="defis.length == 0">
+    <div class="text-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <p>Chargement des défis...</p>
+    </div>
+  </div>
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let defi of defis"
+      [ngClass]="{'list-group-item-success': defi.done }">
+      <span class="font-weight-bold">{{ defi.name }} </span>
+    </li>
+  </ul>
 </div>

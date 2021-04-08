@@ -1,3 +1,3 @@
 export class Defi {
-    constructor(public name: string, public winner: string, public value: number) {}
+    constructor(public name: string, public done: boolean) {}
 }
