@@ -20,6 +20,10 @@ export class HeaderComponent implements OnInit {
         this.router.navigate(["game"]);
       } else if (element == "defis") {
         this.router.navigate(["defis"]);
+      } else if (element == "allos") {
+        this.router.navigate(["allos"]);
+      } else if (element == "videos") {
+        this.router.navigate(["videos"]);
       } else {
         this.router.navigate(["home"], { queryParams: { part: element } });
       }

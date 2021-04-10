@@ -23,6 +23,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VideoYoutubeComponent } from './video-youtube/video-youtube.component';
 import { DefiListComponent } from './defi-list/defi-list.component';
 import { ScoreboardComponent } from './game/scoreboard/scoreboard.component';
+import { MenuComponent } from './menu/menu.component';
+import { AllosComponent } from './allos/allos.component';
+import { VideosComponent } from './videos/videos.component';
 
 
 const appRoutes: Routes = [
@@ -31,6 +34,8 @@ const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent},
   { path: 'game', component: GameComponent},
   { path: 'defis', component: DefiListComponent},
+  { path: 'allos', component: AllosComponent},
+  { path: 'videos', component: VideosComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', redirectTo: 'home'}
 ]
@@ -54,6 +59,9 @@ const appRoutes: Routes = [
     VideoYoutubeComponent,
     DefiListComponent,
     ScoreboardComponent,
+    MenuComponent,
+    AllosComponent,
+    VideosComponent,
   ],
   imports: [
     BrowserModule,
