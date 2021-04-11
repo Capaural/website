@@ -29,8 +29,8 @@ import { VideosComponent } from './videos/videos.component';
 
 
 const appRoutes: Routes = [
-  { path: 'auth/signin', component: SigninComponent},
-  { path: 'members/new', canActivate: [AuthGuardService] ,component: NewMemberComponent},
+  // { path: 'auth/signin', component: SigninComponent},
+  // { path: 'members/new', canActivate: [AuthGuardService] ,component: NewMemberComponent},
   { path: 'home', component: HomePageComponent},
   { path: 'game', component: GameComponent},
   { path: 'defis', component: DefiListComponent},
