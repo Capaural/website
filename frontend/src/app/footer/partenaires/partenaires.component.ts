@@ -36,6 +36,14 @@ export class PartenairesComponent {
       src: "../../../assets/sponsors/6.png",
       alt: "Logo Le Bureau Des Goodies"
     },
+    {
+      src: "../../../assets/sponsors/7.png",
+      alt: "Logo Arcade VR"
+    },
+    {
+      src: "../../../assets/sponsors/8.png",
+      alt: "Logo Pareil' Art"
+    },
   ];
 
   constructor(config: NgbCarouselConfig) {
