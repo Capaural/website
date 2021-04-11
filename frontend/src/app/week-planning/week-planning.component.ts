@@ -18,8 +18,7 @@ export class WeekPlanningComponent implements OnInit {
     "Mardi 13 Avril",
     "Mercredi 14 Avril",
     "Jeudi 15 Avril",
-    "Vendredi 16 Avril",
-    "Samedi 17 Avril",
+    "Vendredi 16 Avril"
   ];
 
 
