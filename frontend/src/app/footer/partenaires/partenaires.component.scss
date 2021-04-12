@@ -1,4 +1,9 @@
 .picsum-img-wrapper > img {
 	display: block;
 	margin: 0 auto;
+	max-width: 100%;
+}
+
+.picsum-img-wrapper {
+	height: 250px;
 }
