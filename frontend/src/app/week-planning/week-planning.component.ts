@@ -28,19 +28,28 @@ export class WeekPlanningComponent implements OnInit {
   constructor(private planningService: PlanningService) { }
 
   ngOnInit(): void {
-
     this.planning = null;
     this.planningSubscription = this.planningService.planningSubject.subscribe(
       (planning: Activity[][]) => {
         this.planning = planning;
-        this.getWantedDay(1);
+        this.getWantedDay(this.getCurrentDay());
       }
     );
     if (!this.planning) this.planningService.emitPlanning();
   }
 
   getCurrentDay() {
-    
+    let date = new Date();
+    let today = date.getDay();
+    let today_day = date.getDate();
+    let today_month = date.getMonth();
+    let today_year = date.getFullYear();
+    console.log(today_day);
+    console.log(today_month);
+    console.log(today_year);
+
+    if (today_day >= 17 && today_month >= 3 && today_year >= 2021) return 0;
+    else return today - 1;
   }
   
   getWantedDay(index) {
