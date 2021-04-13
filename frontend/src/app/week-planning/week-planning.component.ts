@@ -33,10 +33,14 @@ export class WeekPlanningComponent implements OnInit {
     this.planningSubscription = this.planningService.planningSubject.subscribe(
       (planning: Activity[][]) => {
         this.planning = planning;
-        this.getWantedDay(0);
+        this.getWantedDay(1);
       }
     );
     if (!this.planning) this.planningService.emitPlanning();
+  }
+
+  getCurrentDay() {
+    
   }
   
   getWantedDay(index) {

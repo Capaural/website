@@ -82,6 +82,7 @@ function changeClassement() {
 function checkValidity(data) {
     try {
         const decodedToken = jwt.verify(data, PRIVATE_KEY);
+        console.log(decodedToken);
         userRank = {"name": decodedToken.name,"score": decodedToken.score};
         return true;
     } catch {
