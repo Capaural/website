@@ -34,7 +34,7 @@ export class VideoYoutubeComponent implements OnInit {
     element.innerHTML = "";
 
     if (videos.length != 0) {
-        let video = videos[this.videos.length -1];
+        let video = videos[0];
         let content = '<div class="column mb-5"><iframe width="100%" height="500vh" src="' + video.link + '" allowfullscreen></iframe></div>';
         element.innerHTML += content;
     }
