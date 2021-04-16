@@ -11,27 +11,27 @@ export class EnigmaComponent implements OnInit {
 
   clues = [
     {
-      value: "Seul le president est au courant... (Le spammez pas de MP il est pas au courant)",
+      value: "Seul le president est au courant... (Ne lui envoyez pas de message privé)",
       time: this.timeToUnlock
     },
     {
-      value: "Notre menu vous l'avez trouvé commment?",
+      value: "Si vous avez faim, notre menu peut éventuellement vous aider.",
       time: "21h20"
     },
     {
-      value: "Quand on reverse, on reverse tout non?",
+      value: "Le lien était à l'envers, pourquoi pas le contenu aussi ?",
       time: "21h40"
     },
     {
-      value: "Vous connaissez Instagram, on y a commenté notre menu",
+      value: "Un de nos agents a déposé un indice sur notre compte Instagram.",
       time: "22h00"
     },
     {
-      value: "Changez le www par tous vos morceaux",
+      value: "Lorsque l'on vous parle de guerre mondiale, du côté des initiales il faut regarder.",
       time: "22h20"
     },
     {
-      value: "En chiffrement, vous connaissez Cesar et - - - - - - - -",
+      value: "En chiffrement, vous connaissez César et _ _ _ _ _ _ _ _.",
       time: "22h40"
     }
   ];

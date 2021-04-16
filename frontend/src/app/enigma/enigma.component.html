@@ -6,24 +6,24 @@
         <p>L'énigme sera disponible à partir de {{ timeToUnlock }} heures!</p>
     </div>
 
-    <div class="waiting" *ngIf="isTime(timeToUnlock) || true">
+    <div class="waiting" *ngIf="isTime(timeToUnlock)">
 
-        <p>Nos dernières rations de combat sont bloquées dans un coffre. Malheureusement, la combinaison secrète a été perdue. <br>
-        Votre mission, si toutefois vous l'acceptez, est de nous aider à retrouver ce code.<br>
-        Si vous y parvenez, la bouteille de rhum arrangé bloquée dans ce coffre vous sera reversée.</p>
+        <p> Nos dernières rations de combat sont bloquées dans un coffre. Malheureusement, la combinaison secrète a été
+            perdue. Votre mission, si toutefois vous l'acceptez, est de nous aider à retrouver ce code. Si vous y
+            parvenez, la bouteille de rhum arrangé contenue dans ce coffre vous sera reversée. </p>
 
-        <p>Les informations vous seront rélévées au compte goutte, soyez patient ! <br> Mais attention, n'attendez pas
-            trop vos adversaires ont pris de l'avance...</p>
+        <p> Une fois le mot de passe final trouvé (dans sa forme d'origine), envoyez le par message privé au fondateur
+            d'une grande chaine de restaurants. </p>
 
-        <p> Une fois le mot de passe final trouvé (dans sa forme d'origine), envoyez le au fondateur d'une
-            grande chaine de restaurants.</p>
+        <p> Les informations vous seront rélévées au compte goutte, soyez patient ! Mais attention, n'attendez pas trop,
+            vous n'êtes pas le seul sur le coup... </p>
 
-        <p class="font-italic">Un nouvel indice toutes les 20 minutes !</p>
+        <p class="font-italic"> Un nouvel indice toutes les 20 minutes ! ({{ clues.length }} en tout) </p>
 
         <div>
             <h3>Vos indices:</h3>
             <ul *ngFor="let clue of clues">
-                <li *ngIf="isTime(clue.time) || true">{{ clue.value }}</li>
+                <li *ngIf="isTime(clue.time)">{{ clue.value }}</li>
             </ul>
         </div>
 
