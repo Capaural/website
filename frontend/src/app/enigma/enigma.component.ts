@@ -33,6 +33,14 @@ export class EnigmaComponent implements OnInit {
     {
       value: "En chiffrement, vous connaissez César et _ _ _ _ _ _ _ _.",
       time: "23h10"
+    },
+    {
+      value: "La somme des secrets vous ouvrira la porte du succès.",
+      time: "23h30"
+    },
+    {
+      value: "La situation est critique. Aucun soldat n'a accompli la mission. Pour vous aider, le colonel est prêt à fournir un indice à chaque personne. Choissisez bien.",
+      time: "00h00"
     }
   ];
   constructor() { }
