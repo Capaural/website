@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  timeToUnlock = "21h00";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  isTime(value: string) {
+    var timeToCompare = new Date();
+    const now = new Date();
+
+    timeToCompare.setHours(parseInt(value.split('h')[0]), parseInt(value.split('h')[1]), 0);
+
+    return now >= timeToCompare;
   }
 
 }

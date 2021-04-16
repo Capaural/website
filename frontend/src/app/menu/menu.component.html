@@ -1,6 +1,8 @@
 <div class="container" id="menu">
     <br>
     <h3 class="menu">Menu</h3>
-    <img src="../../assets/Menu.png" alt="">
+    
+    <img *ngIf="!isTime(timeToUnlock)" src="../../assets/Menu1.png" alt="">
+    <img *ngIf="isTime(timeToUnlock)" src="../../assets/Menu2.png" alt="">
     <br>
 </div>
