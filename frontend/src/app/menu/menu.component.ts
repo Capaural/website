@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  timeToUnlock = "21h00";
+  timeToUnlock = "21h30";
 
   constructor() { }
 

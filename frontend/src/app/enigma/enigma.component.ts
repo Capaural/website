@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnigmaComponent implements OnInit {
 
-  timeToUnlock = "21h00";
+  timeToUnlock = "21h30";
 
   clues = [
     {
@@ -16,23 +16,23 @@ export class EnigmaComponent implements OnInit {
     },
     {
       value: "Si vous avez faim, notre menu peut éventuellement vous aider.",
-      time: "21h20"
+      time: "21h50"
     },
     {
       value: "Le lien était à l'envers, pourquoi pas le contenu aussi ?",
-      time: "21h40"
+      time: "22h10"
     },
     {
       value: "Un de nos agents a déposé un indice sur notre compte Instagram.",
-      time: "22h00"
+      time: "22h30"
     },
     {
       value: "Lorsque l'on vous parle de guerre mondiale, du côté des initiales il faut regarder.",
-      time: "22h20"
+      time: "22h50"
     },
     {
       value: "En chiffrement, vous connaissez César et _ _ _ _ _ _ _ _.",
-      time: "22h40"
+      time: "23h10"
     }
   ];
   constructor() { }
