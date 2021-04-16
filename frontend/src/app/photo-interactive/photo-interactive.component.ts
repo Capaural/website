@@ -17,6 +17,9 @@ export class PhotoInteractiveComponent implements OnInit {
   members: Member[];
   memberSubscription: Subscription;
 
+  enigmeContent: string;
+  enigmeCode: string;
+
   constructor(private modalService: NgbModal,
     private membersService: MembersService) { }
 
@@ -33,6 +36,14 @@ export class PhotoInteractiveComponent implements OnInit {
   showInfos(event) {
     var target = event.target || event.srcElement || event.currentTarget;
     var idAttr = target.attributes.title.value;
+
+     if (target.id == "Darraillan") {
+       this.enigmeContent = "Vous avez pas faim vous?";
+       this.enigmeCode = "4hxS";
+     } else {
+       this.enigmeContent = "";
+       this.enigmeCode = "";
+     }
 
     if (!this.members || this.members.length == 0 || idAttr > this.members.length) { return; }
 

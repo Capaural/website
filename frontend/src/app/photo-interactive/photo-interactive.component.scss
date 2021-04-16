@@ -152,3 +152,19 @@ img {
       }
     }
   }
+
+.hint {
+    animation: disappear 2s infinite;
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -44,9 +44,6 @@ export class WeekPlanningComponent implements OnInit {
     let today_day = date.getDate();
     let today_month = date.getMonth();
     let today_year = date.getFullYear();
-    console.log(today_day);
-    console.log(today_month);
-    console.log(today_year);
 
     if (today_day >= 17 && today_month >= 3 && today_year >= 2021) return 0;
     else return today - 1;

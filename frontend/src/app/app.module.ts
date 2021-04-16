@@ -26,6 +26,7 @@ import { ScoreboardComponent } from './game/scoreboard/scoreboard.component';
 import { MenuComponent } from './menu/menu.component';
 import { AllosComponent } from './allos/allos.component';
 import { VideosComponent } from './videos/videos.component';
+import { EnigmaComponent } from './enigma/enigma.component';
 
 
 const appRoutes: Routes = [
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
   { path: 'defis', component: DefiListComponent },
   { path: 'allos', component: AllosComponent },
   { path: 'videos', component: VideosComponent },
+  { path: 'enigme', component: EnigmaComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' }
 ]
@@ -62,6 +64,7 @@ const appRoutes: Routes = [
     MenuComponent,
     AllosComponent,
     VideosComponent,
+    EnigmaComponent,
   ],
   imports: [
     BrowserModule,

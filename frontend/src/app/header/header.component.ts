@@ -24,6 +24,8 @@ export class HeaderComponent implements OnInit {
         this.router.navigate(["allos"]);
       } else if (element == "videos") {
         this.router.navigate(["videos"]);
+      } else if (element == "enigma") {
+        this.router.navigate(["enigme"]);
       } else {
         this.router.navigate(["home"], { queryParams: { part: element } });
       }
