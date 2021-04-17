@@ -2,6 +2,7 @@
     <br>
     <h1 id="enigma">Enigme</h1>
 
+
     <div class="waiting" *ngIf="!isTime(timeToUnlock)">
         <p>L'énigme sera disponible à partir de {{ timeToUnlock }} heures!</p>
     </div>
@@ -28,4 +29,7 @@
         </div>
 
     </div>
+    <h2>Résultat</h2>
+    <p class="text-danger">Félicitations à <span class="font-weight-bold">Robin Lecuppe</span> qui a résolu l'énigme en
+        premier.</p>
 </div>

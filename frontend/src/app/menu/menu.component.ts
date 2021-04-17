@@ -18,9 +18,13 @@ export class MenuComponent implements OnInit {
     var timeToCompare = new Date();
     const now = new Date();
 
+    let today_day = timeToCompare.getDate();
+    let today_month = timeToCompare.getMonth();
+    let today_year = timeToCompare.getFullYear();
+
     timeToCompare.setHours(parseInt(value.split('h')[0]), parseInt(value.split('h')[1]), 0);
 
-    return now >= timeToCompare;
+    return now >= timeToCompare || (today_day >= 17 && today_month >= 3 && today_year >= 2021);
   }
 
 }
